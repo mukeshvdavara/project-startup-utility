@@ -62,3 +62,11 @@
        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
           
   ```
+  
+  ## Easy recyclerview adapter
+  ##### Copy base adapter class from [here](https://github.com/mukeshvdavara/project-startup-utility/blob/main/BaseAdapter.kt)
+  ```
+  val adapter: BaseAdapter<YourItemClass> = BaseAdapter.create(this, R.layout.raw_item_grid) { item, holder ->
+        val binding = RawItemGridBinding.bind(holder.itemView)
+        // do something
+  }
