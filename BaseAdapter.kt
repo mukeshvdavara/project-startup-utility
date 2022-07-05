@@ -14,7 +14,7 @@ class BaseAdapter<T : Any>(
         fun <T : Any> create(
             context: Context,
             @LayoutRes layoutRes: Int,
-            callback: (T, RecyclerView.ViewHolder) -> Unit
+            callback: (item: T, holder: RecyclerView.ViewHolder) -> Unit
         ): BaseAdapter<T> {
             return BaseAdapter(context, layoutRes, callback)
         }
