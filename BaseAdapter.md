@@ -1,4 +1,5 @@
-
+# Recyclerview BaseAdapter 
+```kotlin
 class BaseAdapter<T : Any>(
     private val context: Context,
     @LayoutRes private val layoutRes: Int,
@@ -31,3 +32,12 @@ class BaseAdapter<T : Any>(
         callback.invoke(item, holder)
     }
 }
+```
+
+# Adapter usage
+```
+val adapter: BaseAdapter<YourItemClass> = BaseAdapter.create(this, R.layout.raw_item_grid) { item, holder ->
+      val binding = RawItemGridBinding.bind(holder.itemView)
+      // do something
+}
+```
