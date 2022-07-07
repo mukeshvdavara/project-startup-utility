@@ -35,7 +35,7 @@ class BaseAdapter<T : Any>(
 ```
 
 #### Adapter usage
-```
+```kotlin
 val adapter: BaseAdapter<YourItemClass> = BaseAdapter.create(this, R.layout.raw_item_grid) { item, holder ->
       val binding = RawItemGridBinding.bind(holder.itemView)
       // do something
